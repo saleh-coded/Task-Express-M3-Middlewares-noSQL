@@ -1,5 +1,6 @@
 # Blog Api ✍️
 
+# Part 1
 ## Instructions
 
 - Fork and clone [this repository](https://github.com/JoinCODED/Task-Express-M3-Middlewares-noSQL) to your `Development` folder.
@@ -19,17 +20,6 @@ Create a middleware that handles all the errors in your application.
 1. Pass four arguments to your middleware's function: `err`, `req`, `res` and `next`.
 2. Set the response status to the error object's status. If it doesn't have a status, give it a default status of `500`.
 3. Send an object with the message from the error object as a JSON response. If the error object doesn't have a message, give it the following default message `Internal Server Error`.
-
-### Fetch Post Function
-
-In `controllers.js`, create a function called `fetchPost` that handles finding a post from the database by its ID.
-
-1. Pass this function two arguments: `postId` `next`.
-2. In a `try catch` statement, fetch the post by passing `postId` to `findById` if it exist.
-3. Return the found post.
-4. In your `catch` block, pass the error to `next` to trigger the error handling middleware.
-5. Don't forget to export your function.
-
 
 ## More Middlewares
 
@@ -55,6 +45,7 @@ $ npm install cors
 2. In `app.js`, create a variable called cors.
 3. Enable your app to use the cors middleware.
 
+# Part 2
 ### Setup Media Folder
 
 Create a route for the media files.
