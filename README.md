@@ -30,29 +30,12 @@ In `controllers.js`, create a function called `fetchPost` that handles finding a
 4. In your `catch` block, pass the error to `next` to trigger the error handling middleware.
 5. Don't forget to export your function.
 
-#### Router Param
-
-In `routes.js`, create a `param` middleware that handles fetching a post and saving it in the request object.
-
-1. Create a `router.param` middleware that handles `postId` route parameters.
-2. Pass four arguments to this middleware's function: `req`, `res`, `next` and `postId`.
-3. Require `fetchPost`, call it, pass it `postId` and `next`, and save the returned value in a variable called `post`.
-4. If `post` exists, save it in the request object.
-5. Else, create an error object with the message `Post Not Found` or your own message.
-6. Change the error object's status code to `404`.
-7. Pass the error object to `next` to trigger the error handling middleware.
-
-#### Cleanup
-
-1. Remove all the extra code in all the controllers that are using `router.param`.
-2. Access the post from the request object.
-3. Test your routes to make sure they're working properly.
 
 ## More Middlewares
 
 ### Morgan Setup
 
-1. Install [multer](https://www.npmjs.com/package/morgan)
+1. Install [morgan](https://www.npmjs.com/package/morgan)
 
 ```shell
 $ npm install morgan
