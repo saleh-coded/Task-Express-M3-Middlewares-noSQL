@@ -6,9 +6,10 @@ const {
   postsDelete,
   postsCreate,
 } = require('./posts.controllers');
+const upload = require('../../middleware/multer');
 
 router.get('/', postsGet);
-router.post('/', postsCreate);
+router.post('/',upload.single("petImage") , postsCreate);
 
 router.delete('/:postId', postsDelete);
 
